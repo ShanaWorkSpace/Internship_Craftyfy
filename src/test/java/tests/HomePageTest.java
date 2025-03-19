@@ -1,21 +1,14 @@
 package tests;
 
 import java.io.IOException;
-
-//import org.testng.Assert;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import base.TestBase;
-//import constants.AutomationConstants;
+import constants.AutomationConstants;
 import pages.HomePage;
-
-public class HomePageTest {
-	
-
-	
-
-	public class homeinPageTest extends TestBase{
+public class HomePageTest extends TestBase{
 		
 		HomePage home;
 		
@@ -29,21 +22,16 @@ public class HomePageTest {
 		public void testURL() {
 		String currentUrl=driver.getCurrentUrl();
 		 System.out.println(currentUrl);
-//	    Assert.assertEquals(currentUrl, AutomationConstants.homeinURL);
+	    Assert.assertEquals(currentUrl, AutomationConstants.HomeURL);
 	    System.out.println("Test:URL Verification passed");
 		}
 		
 //		@Test(priority = 2)
-//		public void homein_Manager() throws InterruptedException {
-//		
-//		home.titleCheck();
-//		
-//		home.enterUsername(prop.getProperty("UsernameM"));	
-//		home.enterPassword(prop.getProperty("PasswordM"));
-//		
-//		home.eye();
-//		home.signIn();
+//		public void login_admin() throws InterruptedException {
+//		home.enterCredentials(prop.getProperty("UsernameM"),prop.getProperty("PasswordM"));	
 //		Thread.sleep(500);
+		
+		
 //		String Dashurl = driver.getCurrentUrl();
 //		Assert.assertEquals(Dashurl, AutomationConstants.DashURL);
 //	    System.out.println("Test:Dash_URL Found");
@@ -107,4 +95,4 @@ public class HomePageTest {
 //		}
 	}
 
-}
+
