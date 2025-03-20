@@ -16,14 +16,33 @@ public class HomePage extends LocatorsReader{
 		
 		this.driver=driver;
 	}
-	
-	
-	 public void enterCredentials(String Username,String Password) {
-		 WebElement user = driver.findElement(By.xpath(propi.getProperty("homePage.username")));
-		 user.sendKeys(Username);
 	 
-		 WebElement pass = driver.findElement(By.xpath(propi.getProperty("homePage.password")));
-		 pass.sendKeys(Password);
-	 }
+		    public boolean Home()
+	    {
+	        WebElement home=driver.findElement(By.xpath(propi.getProperty("homePage.home")));
+	        boolean flag =home.isDisplayed();
+	        return flag;
+	    }
+		    
+	    public boolean Collection()
+	    {
+	        WebElement collection=driver.findElement(By.xpath(propi.getProperty("homePage.collection")));
+	        boolean flag = collection.isDisplayed();
+	        return flag;
+	    }
+	    
+	    public boolean About()
+	    {
+	        WebElement about=driver.findElement(By.xpath(propi.getProperty("homePage.about")));
+	        boolean flag=about.isDisplayed();
+	        return flag;
+	    }
+	    
+	    public boolean Contact()
+	    {
+	        WebElement contact=driver.findElement(By.xpath(propi.getProperty("homePage.contact")));
+	        boolean flag = contact.isDisplayed();
+	        return flag;
+	    }
 }
 		
