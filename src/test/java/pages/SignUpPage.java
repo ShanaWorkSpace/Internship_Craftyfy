@@ -26,19 +26,21 @@ public class SignUpPage extends LocatorsReader
         create.click();
     }
 
-    public void Name() {
+    public void Name (String Name) {
         WebElement name = driver.findElement(By.xpath(propi.getProperty("SignUpPage.name")));
-        name.sendKeys("Firstuser");
+        name.sendKeys(Name); // Dynamic name from config file
     }
 
-    public void Email() {
+    // Method to enter Email
+    public void Email (String Email) {
         WebElement email = driver.findElement(By.xpath(propi.getProperty("SignUpPage.email")));
-        email.sendKeys("first1user@example.com");
+        email.sendKeys(Email); // Dynamic email from config file
     }
 
-    public void Password() {
+    // Method to enter Password
+    public void Password(String Password) {
         WebElement password = driver.findElement(By.xpath(propi.getProperty("SignUpPage.password")));
-        password.sendKeys("firstuser@123");
+        password.sendKeys(Password); // Dynamic password from config file
     }
 
     public void SignupButton() {

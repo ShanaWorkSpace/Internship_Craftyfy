@@ -40,7 +40,7 @@ public class HomePageTest extends TestBase{
         
 	    System.out.println("Test:HomePage Verification passed");
 		
-//		home.enterCredentials(prop.getProperty("UsernameM"),prop.getProperty("PasswordM"));	
+//home.enterCredentials(prop.getProperty("UsernameM"),prop.getProperty("PasswordM"));	
 		
 }
 
