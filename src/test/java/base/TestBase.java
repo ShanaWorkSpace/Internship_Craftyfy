@@ -20,7 +20,8 @@ public class TestBase
   
   public void load_prop() throws IOException {
 	  prop = new Properties();
-      FileInputStream configFile = new FileInputStream("D:\\INTERN\\Internship_Craftyfy\\src\\test\\resources\\config.properties");
+      FileInputStream configFile = new FileInputStream("C:\\Users\\gssar\\Documents\\Internship\\ICTAK\\src\\test\\resources\\config.properties");
+//    		  ("D:\\INTERN\\Internship_Craftyfy\\src\\test\\resources\\config.properties");
       
       prop.load(configFile);
   }

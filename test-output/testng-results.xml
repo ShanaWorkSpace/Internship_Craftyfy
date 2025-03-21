@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-20T13:01:05 IST" name="Default suite" finished-at="2025-03-20T13:01:10 IST" duration-ms="5769">
+  <suite started-at="2025-03-21T09:25:06 IST" name="Default suite" finished-at="2025-03-21T09:25:11 IST" duration-ms="5539">
     <groups>
     </groups>
-    <test started-at="2025-03-20T13:01:05 IST" name="Default test" finished-at="2025-03-20T13:01:10 IST" duration-ms="5769">
+    <test started-at="2025-03-21T09:25:06 IST" name="Default test" finished-at="2025-03-21T09:25:11 IST" duration-ms="5539">
       <class name="tests.HomePageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.HomePageTest@6ad82709]" started-at="2025-03-20T13:01:05 IST" name="setUp" finished-at="2025-03-20T13:01:09 IST" duration-ms="4327" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.HomePageTest@557caf28]" started-at="2025-03-21T09:25:06 IST" name="setUp" finished-at="2025-03-21T09:25:11 IST" duration-ms="4746" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="page_init()[pri:0, instance:tests.HomePageTest@6ad82709]" started-at="2025-03-20T13:01:09 IST" name="page_init" finished-at="2025-03-20T13:01:09 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="page_init()[pri:0, instance:tests.HomePageTest@557caf28]" started-at="2025-03-21T09:25:11 IST" name="page_init" finished-at="2025-03-21T09:25:11 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- page_init -->
-        <test-method signature="home_show()[pri:1, instance:tests.HomePageTest@6ad82709]" started-at="2025-03-20T13:01:09 IST" name="home_show" finished-at="2025-03-20T13:01:10 IST" duration-ms="987" status="PASS">
+        <test-method signature="home_show()[pri:1, instance:tests.HomePageTest@557caf28]" started-at="2025-03-21T09:25:11 IST" name="home_show" finished-at="2025-03-21T09:25:11 IST" duration-ms="609" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- home_show -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.HomePageTest@6ad82709]" started-at="2025-03-20T13:01:10 IST" name="tearDown" finished-at="2025-03-20T13:01:10 IST" duration-ms="331" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.HomePageTest@557caf28]" started-at="2025-03-21T09:25:11 IST" name="tearDown" finished-at="2025-03-21T09:25:11 IST" duration-ms="134" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
