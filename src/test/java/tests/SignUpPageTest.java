@@ -17,8 +17,8 @@ public class SignUpPageTest extends TestBase
     {
         sign = new SignUpPage(driver);
     }
-    @Test
-    public void Sign()
+    @Test(priority=1)
+    public void SignUp()
     {    
     sign.SignUp();
     sign.CreateAcc();
@@ -29,5 +29,18 @@ public class SignUpPageTest extends TestBase
     sign.Collection();
     sign.Profile();
     sign.Logout();
+    }
+    
+    @Test(priority=2)
+    public void DuplicateSign()
+    {    
+    sign.SignUp();
+    sign.CreateAcc();
+    sign.Name(prop.getProperty("Name"));
+    sign.Email(prop.getProperty("Email"));
+    sign.Password(prop.getProperty("Password"));
+    sign.SignupButton();
+    sign.UserInvalidDisplayed();
+    
     }
 }

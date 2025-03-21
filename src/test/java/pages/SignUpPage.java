@@ -68,4 +68,9 @@ public class SignUpPage extends LocatorsReader
         boolean flag = collection.isDisplayed();
         return flag;
     }
+    public boolean UserInvalidDisplayed() {
+        WebElement alert = driver.findElement(By.xpath(propi.getProperty("SignUpPage.invalidalert")));
+        boolean flag = alert.isDisplayed();
+        return flag;
+    }
 }
