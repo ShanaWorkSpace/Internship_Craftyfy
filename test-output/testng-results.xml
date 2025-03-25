@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-21T13:18:46 IST" name="Default suite" finished-at="2025-03-21T13:18:51 IST" duration-ms="4691">
+  <suite started-at="2025-03-25T21:49:14 IST" name="Default suite" finished-at="2025-03-25T21:49:17 IST" duration-ms="3203">
     <groups>
     </groups>
-    <test started-at="2025-03-21T13:18:46 IST" name="Default test" finished-at="2025-03-21T13:18:51 IST" duration-ms="4691">
-      <class name="tests.SignUpPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.SignUpPageTest@408d971b]" started-at="2025-03-21T13:18:46 IST" name="setUp" finished-at="2025-03-21T13:18:48 IST" duration-ms="1807" status="PASS">
+    <test started-at="2025-03-25T21:49:14 IST" name="Default test" finished-at="2025-03-25T21:49:17 IST" duration-ms="3203">
+      <class name="tests.LoginPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginPageTest@3c46e67a]" started-at="2025-03-25T21:49:14 IST" name="setUp" finished-at="2025-03-25T21:49:16 IST" duration-ms="2021" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="init()[pri:0, instance:tests.SignUpPageTest@408d971b]" started-at="2025-03-21T13:18:48 IST" name="init" finished-at="2025-03-21T13:18:48 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:tests.LoginPageTest@3c46e67a]" started-at="2025-03-25T21:49:16 IST" name="init" finished-at="2025-03-25T21:49:16 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="SignUp()[pri:1, instance:tests.SignUpPageTest@408d971b]" started-at="2025-03-21T13:18:48 IST" name="SignUp" finished-at="2025-03-21T13:18:50 IST" duration-ms="1438" status="PASS">
+        <test-method signature="testLogin()[pri:1, instance:tests.LoginPageTest@3c46e67a]" started-at="2025-03-25T21:49:16 IST" name="testLogin" finished-at="2025-03-25T21:49:16 IST" duration-ms="289" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SignUp -->
-        <test-method signature="DuplicateSign()[pri:2, instance:tests.SignUpPageTest@408d971b]" started-at="2025-03-21T13:18:50 IST" name="DuplicateSign" finished-at="2025-03-21T13:18:51 IST" duration-ms="1240" status="PASS">
+        </test-method> <!-- testLogin -->
+        <test-method signature="testProductSelection()[pri:2, instance:tests.LoginPageTest@3c46e67a]" started-at="2025-03-25T21:49:16 IST" name="testProductSelection" finished-at="2025-03-25T21:49:17 IST" depends-on-methods="tests.LoginPageTest.testLogin" duration-ms="683" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DuplicateSign -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SignUpPageTest@408d971b]" started-at="2025-03-21T13:18:51 IST" name="tearDown" finished-at="2025-03-21T13:18:51 IST" duration-ms="151" status="PASS">
+        </test-method> <!-- testProductSelection -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginPageTest@3c46e67a]" started-at="2025-03-25T21:49:17 IST" name="tearDown" finished-at="2025-03-25T21:49:17 IST" duration-ms="144" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- tests.SignUpPageTest -->
+      </class> <!-- tests.LoginPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
