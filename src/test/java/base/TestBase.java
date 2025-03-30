@@ -26,7 +26,7 @@ public class TestBase
       prop.load(configFile);
   }
 	
-	@BeforeTest
+	@BeforeTest()
 	public void setUp() throws IOException{
 		load_prop();
 		ChromeOptions options = new ChromeOptions();
