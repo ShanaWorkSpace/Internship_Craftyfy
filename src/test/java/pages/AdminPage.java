@@ -86,4 +86,10 @@ public class AdminPage extends LocatorsReader {
         WebElement orders = driver.findElement(By.xpath(propi.getProperty("admin.orders.xpath")));
         orders.click();
     }
-}
+    public boolean isElementDisplayed(String locatorKey) {
+        try {
+            return driver.findElement(By.xpath(propi.getProperty(locatorKey))).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+}}
