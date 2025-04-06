@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import base.TestBase;
+import constants.AutomationConstants;
 import pages.AdminPage;
 
 
@@ -26,21 +27,39 @@ public class AdminPageTest extends TestBase {
         // Assert login success (Check if Add Item button is displayed after login)
         Assert.assertTrue(obj.isElementDisplayed("admin.addItem.xpath"), "Admin login failed!");
         
-        obj.AddItem();
-        obj.UploadImage(prop.getProperty("product.image.path"),prop.getProperty("product.name"),prop.getProperty("product.description"),prop.getProperty("product.price"));
-     // Assert item upload success (Check if list items button is displayed)
-        Assert.assertTrue(obj.isElementDisplayed("admin.listItems.xpath"), "Item upload failed!");
+    }
+    @Test(priority = 2)
+    public void itemSecTC01() {
+        obj.AddItem(); // Assuming you have a method for this in AdminActions
+        obj.listItems();
         
-        obj.ListItems();
-     // Assert listing success (Check if delete button is visible)
-        Assert.assertTrue(obj.isElementDisplayed("admin.deleteItem.xpath"), "Item listing failed!");
-        
-        obj.DeleteItems();
-        // Assert deletion success (Check if delete button is no longer visible)
-        Assert.assertTrue(obj.isElementDisplayed("admin.deleteItem.xpath"), "Item deletion failed!");
+        String actResult = obj.getProductName();
+        Assert.assertEquals(actResult, AutomationConstants.listitem);
 
-        obj.GetOrders();
-        // Assert orders page loaded
-        Assert.assertTrue(obj.isElementDisplayed("admin.orders.xpath"), "Order retrieval failed!");
+        obj.deleteItems();
+        obj.verifyProductRemovedAlert();
+
+        obj.getOrders();
+
+        String orderTitle = obj.getOrderPageTitle();
+        Assert.assertEquals(orderTitle, "Order Page");
+
+        obj.updateDeliveryStatus();
+    }
+
+    @Test(priority = 3)
+    public void adminLogout() {
+        obj.logout();
+    }
+
+    @Test(priority = 4)
+    public void adminNegTC02() {
+    	obj.AdminPanel(prop.getProperty("admin.bemail"), prop.getProperty("admin.npassword"));
+       
+    }
+
+    @Test(priority = 5)
+    public void adminNegTC01() {
+    	obj.AdminPanel(prop.getProperty("admin.nemail"), prop.getProperty("admin.bpassword"));
     }
 }

@@ -1,10 +1,18 @@
 package pages;
 
 import java.io.IOException;
+import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
 import utils.LocatorsReader;
 
 public class AdminPage extends LocatorsReader {
@@ -72,24 +80,81 @@ public class AdminPage extends LocatorsReader {
         add.click();
     }
 
-    public void ListItems() {
+//    public void ListItems() {
+//        WebElement list = driver.findElement(By.xpath(propi.getProperty("admin.listItems.xpath")));
+//        list.click();
+//    }
+//
+//    public void DeleteItems() {
+//        WebElement delete = driver.findElement(By.xpath(propi.getProperty("admin.deleteItem.xpath")));
+//        delete.click();
+//    }
+//
+//    public void GetOrders() {
+//        WebElement orders = driver.findElement(By.xpath(propi.getProperty("admin.orders.xpath")));
+//        orders.click();
+//    }
+//    public boolean isElementDisplayed(String locatorKey) {
+//        try {
+//            return driver.findElement(By.xpath(propi.getProperty(locatorKey))).isDisplayed();
+//        } catch (Exception e) {
+//            return false;
+//        }
+//}
+    public void listItems() {
         WebElement list = driver.findElement(By.xpath(propi.getProperty("admin.listItems.xpath")));
         list.click();
     }
 
-    public void DeleteItems() {
+    public String getProductName() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebElement name = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(propi.getProperty("admin.productName.xpath"))));
+        return name.getText();
+    }
+
+    public void deleteItems() {
         WebElement delete = driver.findElement(By.xpath(propi.getProperty("admin.deleteItem.xpath")));
         delete.click();
     }
 
-    public void GetOrders() {
+    public void verifyProductRemovedAlert() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebElement alert = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(propi.getProperty("admin.alertMessage.xpath"))));
+        String actual = alert.getText();
+        String expected = "Product Removed";
+        Assert.assertEquals(actual, expected);
+        System.out.println(actual);
+    }
+
+    public void getOrders() {
         WebElement orders = driver.findElement(By.xpath(propi.getProperty("admin.orders.xpath")));
         orders.click();
     }
+
+    public String getOrderPageTitle() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebElement heading = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(propi.getProperty("admin.orderTitle.xpath"))));
+        return heading.getText();
+    }
+
+    public void updateDeliveryStatus() {
+        List<WebElement> dropdowns = driver.findElements(By.xpath(propi.getProperty("admin.deliveryDropdowns.xpath")));
+        Select delivery = new Select(dropdowns.get(1));
+        delivery.selectByVisibleText("Delivered");
+    }
+
+    public void logout() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement logoutButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(propi.getProperty("admin.logoutButton.xpath"))));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", logoutButton);
+    }
+
     public boolean isElementDisplayed(String locatorKey) {
         try {
             return driver.findElement(By.xpath(propi.getProperty(locatorKey))).isDisplayed();
         } catch (Exception e) {
             return false;
         }
-}}
+    }    
+
+}
