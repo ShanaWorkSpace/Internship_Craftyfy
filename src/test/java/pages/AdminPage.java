@@ -80,27 +80,6 @@ public class AdminPage extends LocatorsReader {
         add.click();
     }
 
-//    public void ListItems() {
-//        WebElement list = driver.findElement(By.xpath(propi.getProperty("admin.listItems.xpath")));
-//        list.click();
-//    }
-//
-//    public void DeleteItems() {
-//        WebElement delete = driver.findElement(By.xpath(propi.getProperty("admin.deleteItem.xpath")));
-//        delete.click();
-//    }
-//
-//    public void GetOrders() {
-//        WebElement orders = driver.findElement(By.xpath(propi.getProperty("admin.orders.xpath")));
-//        orders.click();
-//    }
-//    public boolean isElementDisplayed(String locatorKey) {
-//        try {
-//            return driver.findElement(By.xpath(propi.getProperty(locatorKey))).isDisplayed();
-//        } catch (Exception e) {
-//            return false;
-//        }
-//}
     public void listItems() {
         WebElement list = driver.findElement(By.xpath(propi.getProperty("admin.listItems.xpath")));
         list.click();

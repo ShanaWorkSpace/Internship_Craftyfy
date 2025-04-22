@@ -11,7 +11,7 @@ public class LocatorsReader {
 	
    public LocatorsReader() throws IOException{
             propi = new Properties();
-            FileInputStream locatorsFile = new FileInputStream("C:\\Users\\gssar\\Documents\\Internship_Craftyfy\\src\\test\\resources\\locators.properties");
+            FileInputStream locatorsFile = new FileInputStream("src\\test\\resources\\locators.properties");
 //            		("D:\\INTERN\\Internship_Craftyfy\\src\\test\\resources\\locators.properties");
 			propi.load(locatorsFile);      
    }
